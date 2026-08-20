@@ -1,52 +1,49 @@
-# 验合约卡
+# EscrowDesk
 
-> **一句话：** 在 BNB Chain 上，用一张「验合约卡」一眼看清合约是否已验证、来源是否可信、有没有明显风险。
+> **一句话：** 代客部署/铸币这单生意，把微信口头单变成 BSC 上的托管验收：客户锁服务费，开发者交合约与材料，条件满足或确认后放款。
 
-BNB Hack: Online Edition 参赛项目 · 赛道倾向 **AI / DeSoc（安全与信任）**  
+BNB Hack · **DeSoc**（验收说明可走 AI）  
 仓库：https://github.com/b123jery/bnb-hack-online
 
-## 为什么做
+## 问题
 
-普通用户面对合约地址时，很难判断：有没有开源验证？是不是仿盘？权限是否危险？  
-验合约卡把「验源 + 关键摘要 + 风险提示」压成一张可分享的卡片，降低上链交互前的信任成本。
+代客部署/铸币多在微信里成交，**钱和活对不上**：客户怕付了没交付，开发者怕做了不结款。
 
-## 计划能力（MVP）
+## 方案
 
-1. 输入 BSC / opBNB 合约地址 → 生成验合约卡  
-2. 展示：验证状态、编译器、创建者线索、基础风险标签  
-3. （可选）AI 一句话解读：这份合约「适合普通人怎么理解」
+EscrowDesk 把交付放到 BSC 上：
+
+1. 客户锁定服务费，写明验收条件  
+2. 开发者提交合约地址、验证链接、说明书哈希  
+3. 条件满足或客户确认后放款  
+
+## 硬规则（比赛版）
+
+| 情形 | 结果 |
+| --- | --- |
+| 开发者未在期限内交付 | 自动退款给客户 |
+| 已交付后 72 小时客户不操作 | 视为验收并放款 |
+| 客户在窗口内拒绝 | 进入双方各押一笔的争议，由指定仲裁地址裁定 |
+
+## 当前状态
+
+**设计中，尚未部署。**
 
 ## 仓库结构
 
 ```
 .
-├── README.md          # 项目一句话 + 说明（本文件）
+├── README.md          # 项目说明（本文件）
 ├── docs/              # 设计与提交材料
-├── contracts/         # 智能合约
-├── apps/              # 前端 / API / Agent
+├── contracts/         # 托管 / 验收合约
+├── apps/              # 前端 / API
 └── .env.example
 ```
 
-## 快速开始
+## 社区
 
-```bash
-npm install
-npm run dev
-```
-
-## 社区与黑客松
-
-- 黑客松主页：[BNB Hack: Online Edition](https://www.bnbchain.org/en/hackathons/bnb-ai-hack)
-- **BNB Chain Discord（请加入）：** https://discord.com/invite/bnbchain  
-  进服后找黑客松 / builder 支持频道，发项目一句话方便找队友与答疑。
-
-## 提交清单
-
-- [x] 公开仓库写清「验合约卡」一句话
-- [ ] Demo / 在线预览
-- [ ] 技术架构说明（见 `docs/OVERVIEW.md`）
-- [ ] 合约地址（testnet / mainnet）
-- [ ] 发推 tag @BNBChain #BNBHack（按官方提交要求）
+- 黑客松：[BNB Hack: Online Edition](https://www.bnbchain.org/en/hackathons/bnb-ai-hack)
+- Discord：https://discord.com/invite/bnbchain
 
 ## License
 

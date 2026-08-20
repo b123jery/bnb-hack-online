@@ -1,8 +1,8 @@
 {
-  "name": "bnb-hack-online",
+  "name": "escrowdesk",
   "version": "0.1.0",
   "private": true,
-  "description": "BNB Hack: Online Edition starter for BNB Chain",
+  "description": "EscrowDesk — BSC escrow for deploy/mint gigs (BNB Hack DeSoc)",
   "scripts": {
     "dev": "echo \"Add your app under apps/ and wire this script\"",
     "build": "echo \"Add build script when ready\"",
@@ -11,7 +11,9 @@
   "keywords": [
     "bnb-chain",
     "hackathon",
-    "bnb-hack"
+    "bnb-hack",
+    "escrow",
+    "desoc"
   ],
   "license": "MIT"
 }
