@@ -1,0 +1,17 @@
+{
+  "name": "bnb-hack-online",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BNB Hack: Online Edition starter for BNB Chain",
+  "scripts": {
+    "dev": "echo \"Add your app under apps/ and wire this script\"",
+    "build": "echo \"Add build script when ready\"",
+    "test": "echo \"Add tests when ready\""
+  },
+  "keywords": [
+    "bnb-chain",
+    "hackathon",
+    "bnb-hack"
+  ],
+  "license": "MIT"
+}
